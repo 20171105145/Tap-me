@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tap_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDg-TN-58Q">
+                                <rect key="frame" x="156" y="30" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzi-Er-usU">
+                                <rect key="frame" x="143" y="464" width="136" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="1NL-DV-KMl"/>
+                                    <constraint firstAttribute="width" constant="102" id="oQX-ng-6yg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M58-4O-oV6">
+                                <rect key="frame" x="95" y="220" width="184" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="J3b-aD-614"/>
+                                    <constraint firstAttribute="width" constant="184" id="hfM-1o-6Zn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="lC6-hV-GLu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="tap me">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aI7-s2-0VI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M58-4O-oV6" firstAttribute="centerX" secondItem="zDg-TN-58Q" secondAttribute="centerX" constant="12.5" id="34Y-tZ-Wt1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vzi-Er-usU" secondAttribute="bottom" constant="73" id="4yv-l6-FHR"/>
+                            <constraint firstItem="zDg-TN-58Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GMc-0P-OWX"/>
+                            <constraint firstItem="vzi-Er-usU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="HcA-uf-nzh"/>
+                            <constraint firstItem="M58-4O-oV6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="237" id="ZTG-Mw-hcS"/>
+                            <constraint firstItem="zDg-TN-58Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2g-TK-H43"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="vzi-Er-usU" id="gNt-WK-YDt"/>
+                        <outlet property="timerLabel" destination="zDg-TN-58Q" id="9r5-xa-oq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+</document>
